@@ -1,7 +1,3 @@
-import { TesterSubclass } from "./TesterSubclass";
-
-declare function require(moduleName: string): any;
-
 class Tester {
 
     public test() {
@@ -15,4 +11,5 @@ class Tester {
     }
 }
 
+import { TesterSubclass } from "./TesterSubclass";
 export { Tester }
