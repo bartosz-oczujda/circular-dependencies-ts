@@ -1,5 +1,5 @@
 import { Tester } from "./Tester";
-import  TesterSubclass = require("./TesterSubclass");
+import { TesterSubclass } from "./TesterSubclass";
 
 let test = new Tester();
 let testSubclass = new TesterSubclass();

@@ -7,4 +7,4 @@ class TesterSubclass extends Tester {
     }
 }
 
-export = TesterSubclass 
+export { TesterSubclass }
