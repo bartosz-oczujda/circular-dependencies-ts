@@ -35,6 +35,6 @@ module.exports = {
     plugins: [
         new webpack.optimize.ModuleConcatenationPlugin(),
         new HtmlWebpackPlugin({template: 'index.html'}),
-        //new CircularDependencyPlugin()
+        new CircularDependencyPlugin()
     ]
 };
