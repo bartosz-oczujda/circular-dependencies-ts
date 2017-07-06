@@ -1,7 +1,10 @@
-class Tester {
+import { Injector } from "./Injector";
+import { ITester } from "./ITester";
+
+class Tester implements ITester {
 
     public test() {
-        let cls = new TesterSubclass();
+        let cls = Injector.getTesterSubclass()
         console.log("Initialized with circular dependency")
         console.log(cls.getNum())
     };
@@ -11,5 +14,4 @@ class Tester {
     }
 }
 
-import { TesterSubclass } from "./TesterSubclass";
 export { Tester }

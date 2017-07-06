@@ -1,6 +1,5 @@
-import { Tester } from "./Tester";
-import { TesterSubclass } from "./TesterSubclass";
+import { Injector } from "./Injector";
 
-let test = new Tester();
-let testSubclass = new TesterSubclass();
+let test = Injector.getTester()
+let testSubclass = Injector.getTesterSubclass()
 test.test();
