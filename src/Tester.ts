@@ -1,14 +1,18 @@
-//import { TesterSubclass as Sub } from "./TesterSubclass";
+declare function require(moduleNames: string[], onLoad: (...args: any[]) => void): void;
 
-declare function require(moduleName: string): any;
+import * as Subclass from "./TesterSubclass";
 
 class Tester {
 
     public test() {
-        let TesterSubclass = require("./TesterSubclass");
-        let cls = new TesterSubclass();
-        console.log("Initialized with circular dependency")
-        console.log(cls.getNum())
+
+        require(["./TesterSubclass"], (TesterSubclass: typeof Subclass) => {
+            let testerInitialized = new TesterSubclass.TesterSubclass()
+            console.log("Initialized with circular dependency")
+            console.log(testerInitialized.getNum())
+        })
+
+        
     };
 
     public getNum() {

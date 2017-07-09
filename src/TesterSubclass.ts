@@ -5,6 +5,7 @@ class TesterSubclass extends Tester {
     getNum(): number {
         return 33
     }
+    
 }
 
-export = TesterSubclass 
+export { TesterSubclass }
